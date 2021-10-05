@@ -37,7 +37,7 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 
-	public void popLast() {
+	public INode<K> popLast() {
 		INode temp = head;
 		INode secondLast = tail;
 		while (temp.getNext() != tail) {
@@ -45,6 +45,7 @@ public class MyLinkedList<K> {
 		}
 		temp.setNext(null);
 		tail = temp;
+		return secondLast;
 	}
 
 	public void display() {
