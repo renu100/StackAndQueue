@@ -31,9 +31,10 @@ public class MyLinkedList<K> {
 		newNode.setNext(tempNode);
 	}
 
-	public void pop() {
+	public INode<K> pop() {
 		INode tempNode = head;
 		head = head.getNext();
+		return tempNode;
 	}
 
 	public void popLast() {
